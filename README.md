@@ -1,29 +1,47 @@
-# Testes automatizados com Cypress - Básico
+# Cypress basico v2 - TAT
 
-👋 Seja bem-vindo(a)!
+Projeto criado para fins de estudo e aplicação de conhecimento do cypress-basico, criado pelo instrutor Walmyr. Este documento visa praticar a aula 39.Documentaçao.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai adorar este curso. ❤️
+## Pré requisitos
+Até o momento da criação desse doc as versões instaladas são:
 
-## O que você vai aprender
+|          | versão        | observação   |
+|----------|---------------|--------------|
+|**vs code**   |versão recente |  ---         |
+|**node**	   |`18.15.0`      |instalar antes|
+|**npm**       |`9.5.0`        |instalar antes|
+|**git**       |`2.40.0`       |instalar antes|
+|**cypress**   |`12.18.1`      |instalar após clonar projeto|
 
-Durante o curso de testes automatizados com Cypress (básico), você vai aprender:
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar _upload_ de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como executar os testes em um _pipeline_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
+## Instalação do cypress
 
-## Vamos começar?
+Uma vez que já tenha clonado o repositório e instalado o node, npm e git, então dentro da pasta do projeto rodar  `npm install ou npm i` dessa maneira irá instalar as dependencias dev que estão no arquivo package.json e instalar o que tiver na package-lock.json Se ao rodar esse projeto houver novas versoes do cypress para atualizar bata rodar: 
+`npm install cypress@colocar-aqui-versaoAtual --save-dev` (ou `npm i cypress@colocar-aqui-versaoAtual -D` para a versão curta).
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+Logo após, só rodar `npm run cy:open` ou `npx cypress open`.
+
+**Configuração extra**:
+
+Dentro do arquivo cypress.config.js add:
+
+```json
+	{
+		"pluginsFile": false,
+		"viewportHeight": 880,
+		"viewportWidth": 1280
+	}
+```
+
+# Testes
+ Está disponível para rodar em modo headless ou para abrir e rodar manualmente. Também disponível uma simulação mobile.
+
+### Mobile
+Rodar `npm run cy:open:mobile` para abrir os testes configurados para simular testes mobiles. Ou rodar `npm run cy:run:mobile` para rodar modo headless.
+
+### Desktop
+Rodar `npm run cy:open` para abrir os testes. Ou rodar `npm run test` para rodar modo headless.
 
 ___
 
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+Recriado por [Patrícia Barcellos](https://github.com/barcellospatriciaa) 👻

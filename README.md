@@ -42,6 +42,16 @@ Rodar `npm run cy:open:mobile` para abrir os testes configurados para simular te
 ### Desktop
 Rodar `npm run cy:open` para abrir os testes. Ou rodar `npm run test` para rodar modo headless.
 
+# Github actions - possível problema
+Estou rodando cypress na versao 12.18.1 , entao deu erro quando configurei o arquivo ci.yml. 
+
+> You are attempting to use Cypress with an older config file: cypress.json
+When you upgraded to Cypress v10.0 the config file was updated and moved to a new location: cypress.config.js
+
+Para corrigir e passar a rodar o teste corretamente, foi ajustado `github-action@v2` para `github-action@v4.1.0`.
+
+You may need to update any CLI scripts to ensure that they are referring the new version. This would typically look something like:
+"cypress open --config-file=cypress.config.js"
 ___
 
 Recriado por [Patrícia Barcellos](https://github.com/barcellospatriciaa) 👻
